@@ -19,7 +19,7 @@ export function getAllTags(posts: CollectionEntry<'poem'>[]) {
         });
 }
 
-// export function getPostsByTag(posts: CollectionEntry<'trips'>[], tagSlug: string) {
-//     const filteredPosts: CollectionEntry<'trips'>[] = posts.filter((post) => (post.data.tags || []).map((tag) => slugify(tag)).includes(tagSlug));
-//     return filteredPosts;
-// }
+export function getPostsByTag(posts: CollectionEntry<'trips'>[], tagSlug: string) {
+    const filteredPosts: CollectionEntry<'trips'>[] = posts.filter((post) => (post.data.tags || []).map((tag) => slugify(tag)).includes(tagSlug));
+    return filteredPosts;
+}
